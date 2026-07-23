@@ -61,10 +61,10 @@ Every run produces clean, separated output files in your chosen folder.
 |------|----------|
 | `clean.txt` | Addresses that passed all 7 layers — safe to send |
 | `risky.txt` | Catch-all domains — server accepts any address, may be a trap |
-| `dead.txt` | Domains with no MX records (optional — toggle in Settings) |
-| `honeypots.txt` | All flagged addresses (optional — toggle in Settings) |
+| `dead.txt` | Domains with no MX record, or a mailbox rejected by SMTP verification |
+| `honeypots.txt` | Blocklisted traps & malformed addresses (optional — toggle in Settings) |
 
-By default only `clean.txt` and `risky.txt` are written. Enable **Save Honeypots** in Settings to also export the flagged addresses for your records.
+`clean.txt`, `risky.txt` and `dead.txt` are written automatically whenever a run produces addresses in those categories. Enable **Save Honeypots** in Settings to also export the flagged trap addresses to `honeypots.txt` for your records.
 
 ---
 
