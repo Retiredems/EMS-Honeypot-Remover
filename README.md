@@ -173,8 +173,11 @@ Duplicate addresses are removed before scanning begins. Each address is evaluate
 | Thread Count | 10 | Concurrent DNS / SMTP workers |
 | DNS Timeout | 5 s | Timeout per DNS lookup |
 | DNS Servers | 1.1.1.1, 8.8.8.8 | Resolvers to use |
-| Remove Dead Domains | On | Flag domains with no MX as `dead` |
-| Save Honeypots | Off | Write all flagged addresses to `honeypots.txt` |
+| Remove Dead Domains | On | Flag domains with no MX record as `dead` |
+| Verify Mailbox (SMTP) | Off | Probe each address over SMTP and flag mailboxes that don't exist as `dead`. Needs outbound port 25 — run **Check Port 25** first |
+| Save Honeypots | Off | Write flagged trap addresses to `honeypots.txt` |
+
+**Check Port 25** — a one-click button that tests whether your network allows outbound SMTP (port 25). Mailbox verification only works when this shows **OPEN**; on a blocked network (common on home ISPs) the tool keeps addresses rather than guessing.
 
 ---
 
